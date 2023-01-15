@@ -25,6 +25,8 @@ body{
     font-size: 1.125rem;
     color: var(--clr-text-primary);
     line-height: 1.5;
+    overflow-x: hidden;
+
 }
 
 /* header */
@@ -101,6 +103,7 @@ a{
 .btn{
     background-color: var(--clr-primary);
     width: 10rem;
+    height: 42px;
     border-radius: 60px;
     border:none;
 
@@ -929,6 +932,7 @@ section>*{
     opacity: 0;  
     cursor: default;
     transition: all 0.5s ease;
+    
 }
 .active{
     opacity: 1;
@@ -950,6 +954,7 @@ section>*{
     line-height: 1.43;
     color: var(--clr-blue-text);
     margin-left: 1.875rem;
+    margin-top: 1.125rem;
 }
 
 
@@ -970,7 +975,6 @@ section>*{
 .more--container{
     display: flex;
     gap:12px;
-    cursor: pointer;
     margin-top: 1.625rem;
     align-items: center;
 }
@@ -978,10 +982,12 @@ section>*{
     font-weight: var(--fw-bolder);
     font-size: 1rem;
     color: #F6F8FC;
+    cursor: pointer;
 }
 .more--container>img{
     width: 13px;
     height: 6px;
+    cursor: pointer;
 }
 /* FAQ */
 
@@ -990,8 +996,25 @@ section>*{
 
 
 
+.nav-circles{
+    position: relative;
+    justify-content: center;
+    padding-bottom: 2rem;
+    display: flex;
+    gap: 10px;
+}
+.nav-circle{
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #CBCED6;
+    margin-right: 10px;
 
-
+    cursor: pointer;
+}
+.current{
+    background-color: var(--clr-primary);
+}
 
 /* responsive? */
 
@@ -1184,6 +1207,9 @@ section>*{
         font-weight: var(--fw-bold);
         font-size: 0.75rem;
     }
+    .nav-circles{
+        display: flex;
+    }
 
     .moneyback-wrapper{
         font-weight: var(--fw-bold);
@@ -1305,25 +1331,117 @@ section>*{
         margin-bottom: 1.375rem;
     }
 
-    .nav-circles{
-        position: relative;
-        justify-content: center;
-        padding-bottom: 2rem;
-        display: flex;
-        gap: 10px;
+    
+    .answer--container>p{
+        margin-top: 0.5rem;
     }
-    .nav-circle{
-        width: 14px;
-        height: 14px;
-        border-radius: 50%;
-        background-color: #CBCED6;
-        margin-right: 10px;
+    
+}
 
-        cursor: pointer;
+@media only screen and (max-width:410px){
+    .main--title-magic::before {
+        margin-left: 7.4rem;
+        
     }
-    .current{
-        background-color: var(--clr-primary);
+    section {
+        display: grid;
+        grid-template-columns: minmax(0.5em,1fr) minmax(20rem,100ch) minmax(1em,1fr);
+        justify-items: start;
+    }
+    .order-desktop {
+        width: 312.9px;
+    }
+    .reviewer{
+        width: 20.963rem;
+    }
+    .stars--name > p {
+        padding-right: 0;
+    }
+    .bundle{
+        margin-left: 2.85rem;
+    }
+    .card {
+        width: 322.7px;
+    }
+    .installment-wrapper > p {
+        font-size: 0.588rem;
+    }
+    .save-wrapper{
+        width: 301.5px;
+    }
+    .moneyback-wrapper{
+        width: 220.95px;
+    }
+    .get-your-magic{
+        min-width: 300px;
+        width: 300px;
+    }
+    .payment--wrapper {
+        gap: 0.8rem;
+        left: 55%;
+    }
+}
+@media only screen and (max-width:320px){
+    section {
+        display: grid;
+        grid-template-columns: minmax(0.1em,1fr) minmax(20rem,100ch) minmax(0.1em,1fr);
+        justify-items: start;
     }
 }
 
 
+@media only screen and (min-width:770px) and (max-width:1330px){
+    .faq--container{
+        gap: 10px;
+        justify-content: center;
+    }
+    .faq--container > img {
+        width: 302px;
+        height: 334px;
+    }
+    .question--container{
+        width: 421px;
+    }
+    .answer--container{
+        width: 421px;
+    }
+
+    .nav-circles{
+        display: flex;
+    }
+    .reviews--container {
+        max-width: 90vw;
+        overflow-x: hidden;
+    }
+    .image-desktop {
+        margin-top: 0rem;
+        margin-left: 0rem;
+    }
+    .card{
+        margin-right: 0.938rem;
+        width: 313px;
+    }
+    .ad-text{
+        font-size: 1.55rem;
+    }
+    .installment-wrapper>p{
+        font-size: 0.55rem;
+    }
+    .price--wrapper{
+        left: 56%;
+    }
+    .save-wrapper{
+        width: 286px;
+    }.moneyback-wrapper{
+        width: 204px;
+    }
+    .get-your-magic{
+        min-width: 17.688rem;
+    }
+    .payment--wrapper{
+        gap: 0.6rem;
+    }
+    .remaining-amount{
+        left: 61%;
+    }
+}
